@@ -1,5 +1,7 @@
 # langgraph-agent-engineering
 
-Development branch (`dev_ram`). `main` is the final/production branch.
+**LangGraph Agent Engineering** — Building, orchestrating, and engineering AI agents with [LangGraph](https://github.com/langchain-ai/langgraph). Covers multi-agent workflows, self-RAG, human-in-the-loop patterns, and cyclical graph architectures.
 
-Short description: Implementation of advanced autonomous AI agents using LangGraph — Multi-Agent workflows, Self-RAG, Human-in-the-Loop, and cyclical graph patterns.
+---
+
+*Development branch: `dev_ram`. Production: `main`.*
