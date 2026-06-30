@@ -1,0 +1,11 @@
+Carol Singh — Cloud Platform Engineer
+Location: Austin, TX
+Years of Experience: 6
+
+Skills: Java, AWS (EC2, S3, Lambda), Terraform, Kubernetes, Python
+
+Experience:
+- Platform engineer at RetailCloud (2019–2025): AWS infrastructure, CI/CD, Java microservices.
+- DevOps engineer at LogiSys (2017–2019): Terraform, monitoring.
+
+Education: BS Computer Engineering

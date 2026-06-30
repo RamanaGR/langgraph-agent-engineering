@@ -1,0 +1,11 @@
+Bob Martinez — Backend Developer
+Location: Remote (US)
+Years of Experience: 4
+
+Skills: Python, Django, PostgreSQL, Docker, basic Java
+
+Experience:
+- Backend developer at HealthTech (2021–2025): REST APIs, ETL pipelines.
+- Intern at DataWorks (2020–2021): Python scripting.
+
+Education: BS Information Systems

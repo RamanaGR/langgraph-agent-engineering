@@ -1,0 +1,67 @@
+name: eval
+
+on:
+  push:
+    branches: [main, dev_*]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  eval-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          version: "latest"
+
+      - name: Set up Python
+        run: uv python install 3.11
+
+      - name: Install dependencies
+        run: uv sync --extra dev
+
+      - name: Eval metric unit tests (F1@K gates)
+        run: uv run pytest tests/unit/test_phase1b.py tests/unit/test_week2_rag.py -q
+
+      - name: Golden set schema check
+        run: |
+          uv run python -c "
+          import json
+          from pathlib import Path
+          data = json.loads(Path('eval/golden_sets/phase1b.json').read_text())
+          assert len(data['pairs']) >= 40, 'need 40+ golden pairs'
+          print(f\"Golden set OK: {len(data['pairs'])} pairs\")
+          "
+
+  eval-integration:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Set up Python
+        run: uv python install 3.11
+
+      - name: Install dependencies
+        run: uv sync --extra dev
+
+      - name: Start Docker services
+        run: docker compose up -d postgres redis milvus minio
+
+      - name: Wait for Postgres
+        run: |
+          for i in $(seq 1 30); do
+            docker compose exec -T postgres pg_isready -U talentscreen && exit 0
+            sleep 2
+          done
+          exit 1
+
+      - name: Golden eval (requires Ollama + seeded data locally)
+        run: echo "Run manually: uv run python eval/run_golden_eval.py"
+        continue-on-error: true

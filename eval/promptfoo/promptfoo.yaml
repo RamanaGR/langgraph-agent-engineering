@@ -1,0 +1,58 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+description: TalentScreen RAG prompt variants (Phase 1b)
+
+prompts:
+  - file://prompts/variant_a_fewshot.txt
+  - file://prompts/variant_b_structured.txt
+  - file://prompts/variant_c_concise.txt
+
+providers:
+  - id: ollama:llama3.2:latest
+    config:
+      temperature: 0.1
+
+defaultTest:
+  options:
+    provider: ollama:llama3.2:latest
+
+tests:
+  - vars:
+      question: Who has Java and AWS experience?
+      context: |
+        [chunk_id=alice-1] Alice Chen — Skills: Java, Spring Boot, AWS, Kubernetes
+        [chunk_id=carol-1] Carol Singh — Skills: Java, AWS (EC2, S3, Lambda), Terraform
+    assert:
+      - type: contains
+        value: Java
+      - type: contains
+        value: AWS
+      - type: is-json
+
+  - vars:
+      question: Which candidate is primarily Python focused?
+      context: |
+        [chunk_id=bob-1] Bob Martinez — Skills: Python, Django, PostgreSQL
+        [chunk_id=notes-1] Bob — Primary strength is Python; Java experience limited
+    assert:
+      - type: contains
+        value: Bob
+      - type: contains
+        value: Python
+
+  - vars:
+      question: What is the minimum years of experience for the Senior Java role?
+      context: |
+        [chunk_id=jd-1] Senior Java Developer — Required Experience: 5+ years
+    assert:
+      - type: contains
+        value: "5"
+      - type: is-json
+
+  - vars:
+      question: Who is recommended for onsite interview?
+      context: |
+        [chunk_id=notes-carol] Carol Singh — Strong match; recommend onsite
+    assert:
+      - type: icontains
+        value: Carol
+      - type: is-json

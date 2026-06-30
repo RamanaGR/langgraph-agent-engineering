@@ -1,0 +1,37 @@
+# Milvus Helm values — install after EKS cluster is ready:
+#
+#   helm repo add milvus https://zilliztech.github.io/milvus-helm/
+#   helm install milvus milvus/milvus -f helm-values.yaml -n milvus --create-namespace
+
+cluster:
+  enabled: true
+
+etcd:
+  replicaCount: 1
+
+pulsar:
+  enabled: false
+
+minio:
+  enabled: true
+  mode: standalone
+
+standalone:
+  resources:
+    requests:
+      memory: "4Gi"
+      cpu: "1000m"
+
+service:
+  type: ClusterIP
+  port: 19530
+
+metrics:
+  serviceMonitor:
+    enabled: true
+
+extraConfigFiles:
+  user.yaml: |
+    common:
+      security:
+        authorizationEnabled: true

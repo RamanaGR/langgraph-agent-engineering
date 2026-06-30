@@ -1,0 +1,532 @@
+{
+  "version": "phase1b-v1",
+  "description": "Expanded golden retrieval set (45 queries) \u2014 keyword proxy until chunk_ids populated",
+  "tenant_id": "demo-tenant",
+  "pairs": [
+    {
+      "id": "q001",
+      "query": "Who has 5 or more years of Java and AWS cloud experience?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "Java",
+        "AWS"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q002",
+      "query": "Which candidate led a microservices migration?",
+      "expected_doc_types": [
+        "resume",
+        "interview_notes"
+      ],
+      "expected_keywords_in_chunks": [
+        "microservices"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q003",
+      "query": "What are the required skills for the Senior Java Developer role?",
+      "expected_doc_types": [
+        "job_description"
+      ],
+      "expected_keywords_in_chunks": [
+        "Spring Boot",
+        "Kubernetes"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q004",
+      "query": "Who has Terraform experience?",
+      "expected_doc_types": [
+        "resume",
+        "job_description"
+      ],
+      "expected_keywords_in_chunks": [
+        "Terraform"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q005",
+      "query": "What concerns were raised about Alice in interview feedback?",
+      "expected_doc_types": [
+        "interview_notes"
+      ],
+      "expected_keywords_in_chunks": [
+        "Kubernetes"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q006",
+      "query": "Which candidate is primarily Python focused?",
+      "expected_doc_types": [
+        "resume",
+        "interview_notes"
+      ],
+      "expected_keywords_in_chunks": [
+        "Python"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q007",
+      "query": "Who is recommended for onsite interview for the Senior Java role?",
+      "expected_doc_types": [
+        "interview_notes"
+      ],
+      "expected_keywords_in_chunks": [
+        "Carol",
+        "onsite"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q008",
+      "query": "List AWS services mentioned across all resumes",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "AWS",
+        "ECS",
+        "S3",
+        "Lambda"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q009",
+      "query": "What is the minimum years of experience required for the job?",
+      "expected_doc_types": [
+        "job_description"
+      ],
+      "expected_keywords_in_chunks": [
+        "5+ years",
+        "5"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q010",
+      "query": "Who is based in Miami?",
+      "expected_doc_types": [
+        "resume",
+        "job_description"
+      ],
+      "expected_keywords_in_chunks": [
+        "Miami"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q011",
+      "query": "Who has Spring Boot skills?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "Spring Boot"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q012",
+      "query": "Which candidate worked at FinTech Corp?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "FinTech"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q013",
+      "query": "Who has Kubernetes experience?",
+      "expected_doc_types": [
+        "resume",
+        "job_description"
+      ],
+      "expected_keywords_in_chunks": [
+        "Kubernetes"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q014",
+      "query": "What nice-to-have skills are listed on the JD?",
+      "expected_doc_types": [
+        "job_description"
+      ],
+      "expected_keywords_in_chunks": [
+        "Kafka",
+        "Terraform"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q015",
+      "query": "Who has PostgreSQL experience?",
+      "expected_doc_types": [
+        "resume",
+        "job_description"
+      ],
+      "expected_keywords_in_chunks": [
+        "PostgreSQL"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q016",
+      "query": "What did interviewers say about Bob Martinez?",
+      "expected_doc_types": [
+        "interview_notes"
+      ],
+      "expected_keywords_in_chunks": [
+        "Bob",
+        "Python"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q017",
+      "query": "Who is a Cloud Platform Engineer?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "Cloud",
+        "Platform"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q018",
+      "query": "Which candidate is in Austin?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "Austin"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q019",
+      "query": "Who has CI/CD experience?",
+      "expected_doc_types": [
+        "resume",
+        "job_description"
+      ],
+      "expected_keywords_in_chunks": [
+        "CI/CD"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q020",
+      "query": "What responsibilities does the Senior Java role include?",
+      "expected_doc_types": [
+        "job_description"
+      ],
+      "expected_keywords_in_chunks": [
+        "mentor",
+        "code reviews"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q021",
+      "query": "Who has Docker skills?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "Docker"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q022",
+      "query": "Which candidate has 7 years of experience?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "7"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q023",
+      "query": "Who has Lambda experience?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "Lambda"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q024",
+      "query": "What is Carol Singh's background?",
+      "expected_doc_types": [
+        "resume",
+        "interview_notes"
+      ],
+      "expected_keywords_in_chunks": [
+        "Carol",
+        "AWS"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q025",
+      "query": "Who has limited Java experience?",
+      "expected_doc_types": [
+        "interview_notes"
+      ],
+      "expected_keywords_in_chunks": [
+        "Java",
+        "limited"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q026",
+      "query": "What education does Alice Chen have?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "Computer Science"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q027",
+      "query": "Who worked at RetailCloud?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "RetailCloud"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q028",
+      "query": "What AWS services are required on the job?",
+      "expected_doc_types": [
+        "job_description"
+      ],
+      "expected_keywords_in_chunks": [
+        "ECS",
+        "S3",
+        "RDS"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q029",
+      "query": "Who has event streaming or Kafka mentioned?",
+      "expected_doc_types": [
+        "resume",
+        "job_description"
+      ],
+      "expected_keywords_in_chunks": [
+        "Kafka"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q030",
+      "query": "Which candidate is remote?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "Remote"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q031",
+      "query": "Who has DevOps experience?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "DevOps"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q032",
+      "query": "What location is the job posted for?",
+      "expected_doc_types": [
+        "job_description"
+      ],
+      "expected_keywords_in_chunks": [
+        "Miami"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q033",
+      "query": "Who has EC2 experience?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "EC2"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q034",
+      "query": "What gaps were noted for Bob?",
+      "expected_doc_types": [
+        "interview_notes"
+      ],
+      "expected_keywords_in_chunks": [
+        "Java",
+        "cloud"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q035",
+      "query": "Who has monitoring or LogiSys experience?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "LogiSys",
+        "monitoring"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q036",
+      "query": "Which candidate has BS degree?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "BS"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q037",
+      "query": "Who built payment APIs?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "payment",
+        "API"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q038",
+      "query": "What hybrid work arrangement is offered?",
+      "expected_doc_types": [
+        "job_description"
+      ],
+      "expected_keywords_in_chunks": [
+        "hybrid"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q039",
+      "query": "Who has Django experience?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "Django"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q040",
+      "query": "Which interviewer is Jane?",
+      "expected_doc_types": [
+        "interview_notes"
+      ],
+      "expected_keywords_in_chunks": [
+        "Jane"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q041",
+      "query": "Who has microservices on AWS?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "microservices",
+        "AWS"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q042",
+      "query": "What is the job title?",
+      "expected_doc_types": [
+        "job_description"
+      ],
+      "expected_keywords_in_chunks": [
+        "Senior Java Developer"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q043",
+      "query": "Who has 6 years of experience?",
+      "expected_doc_types": [
+        "resume"
+      ],
+      "expected_keywords_in_chunks": [
+        "6"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q044",
+      "query": "What did Mike say about Bob?",
+      "expected_doc_types": [
+        "interview_notes"
+      ],
+      "expected_keywords_in_chunks": [
+        "Mike",
+        "Python"
+      ],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q045",
+      "query": "Who has infrastructure as code skills?",
+      "expected_doc_types": [
+        "resume",
+        "job_description"
+      ],
+      "expected_keywords_in_chunks": [
+        "Terraform"
+      ],
+      "expected_chunk_ids": []
+    }
+  ]
+}

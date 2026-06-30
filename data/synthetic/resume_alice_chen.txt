@@ -1,0 +1,11 @@
+Alice Chen — Senior Java Engineer
+Location: Miami, FL
+Years of Experience: 7
+
+Skills: Java, Spring Boot, AWS, Kubernetes, PostgreSQL, microservices
+
+Experience:
+- Lead backend engineer at FinTech Corp (2020–2025): built payment APIs on AWS ECS, migrated monolith to microservices.
+- Software engineer at CloudStart (2017–2020): Java services, Kafka event streaming.
+
+Education: MS Computer Science, Atlantis University

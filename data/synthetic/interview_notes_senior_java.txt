@@ -1,0 +1,24 @@
+Interviewer: Jane (Engineering Manager)
+Candidate: Alice Chen
+Role: Senior Java Cloud Developer
+
+Notes:
+- Strong Java and AWS experience; led microservices migration.
+- Clear communication on system design tradeoffs.
+- Concern: limited recent Kubernetes hands-on depth — probe in system design round.
+
+Interviewer: Mike (Staff Engineer)
+Candidate: Bob Martinez
+Role: Senior Java Cloud Developer
+
+Notes:
+- Primary strength is Python; Java experience is limited to coursework and small modules.
+- Enthusiastic learner but gap on required 5+ years Java + cloud stack.
+
+Interviewer: Jane
+Candidate: Carol Singh
+Role: Senior Java Cloud Developer
+
+Notes:
+- Excellent AWS and Terraform background; solid Java microservices work.
+- Strong match for cloud platform requirements; recommend onsite.
