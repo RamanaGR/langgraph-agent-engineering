@@ -1,8 +1,8 @@
 # TalentScreen
 
-Local RAG + LangGraph multi-agent hiring platform (portfolio build).
+RAG + LangGraph multi-agent hiring platform. Ingest resumes and job documents, run hybrid retrieval with cited answers, and orchestrate specialized agents for recruiter search, candidate fit scoring, and human-in-the-loop approvals.
 
-See [PROJECT_PLAN.md](PROJECT_PLAN.md) for architecture and phased roadmap.
+See [docs/architecture.md](docs/architecture.md) for system design and agent topology.
 
 ## Week 1 — Quick start
 
@@ -88,7 +88,7 @@ Without spaCy, regex fallback redacts emails/phones/SSNs.
 
 ## Phase 2a — LangGraph 7-agent graph
 
-Seven resume-aligned agent nodes + SummarizationNode, native `@tool` functions, HITL interrupt.
+Seven specialized agent nodes + SummarizationNode, native `@tool` functions, HITL interrupt.
 
 ```
 Router → Summarize? → Orchestrator (plan) → Dispatch loop:
@@ -246,12 +246,6 @@ curl -X POST http://localhost:8000/applications \
 
 See `infra/aws/README.md` and `docs/aws-mapping.md`.
 
-### Interview docs
-
-- `docs/resume-justification.md` — bullet → file mapping
-- `docs/narrative-alignment.md` — common interview Q&A
-- `docs/learning/` — phase guides
-
 ## Project layout
 
 ```
@@ -267,7 +261,7 @@ src/talentscreen/
   observability/ Langfuse tracing
 frontend/react/  Recruiter + candidate React UI (Phase 3)
 infra/aws/       Terraform AWS reference (Phase 3)
-docs/            aws-mapping, resume-justification, learning guides
+docs/            architecture, aws-mapping, MCP setup
 eval/golden_sets/phase1a.json
 data/synthetic/  Demo resumes, JD, interview notes
 infra/sql/       Postgres schema

@@ -1,6 +1,6 @@
 # AWS mapping — local demo to production
 
-TalentScreen runs **entirely local** for the portfolio. This document explains how each component maps to AWS for interview discussions.
+TalentScreen runs locally via Docker Compose for development and demos. This document describes how each component maps to AWS for a production deployment.
 
 ## Architecture swap
 

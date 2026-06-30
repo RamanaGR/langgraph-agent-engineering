@@ -76,3 +76,6 @@ temp/
 eval/results/
 eval/output/
 .promptfoo/
+
+# Private learning / interview prep (kept in local/ only)
+local/
