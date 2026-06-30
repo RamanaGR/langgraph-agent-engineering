@@ -1,0 +1,77 @@
+{
+  "version": "phase1a-v1",
+  "description": "Golden retrieval set — populate chunk_id values after first ingestion run",
+  "tenant_id": "demo-tenant",
+  "pairs": [
+    {
+      "id": "q001",
+      "query": "Who has 5 or more years of Java and AWS cloud experience?",
+      "expected_doc_types": ["resume"],
+      "expected_keywords_in_chunks": ["Java", "AWS"],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q002",
+      "query": "Which candidate led a microservices migration?",
+      "expected_doc_types": ["resume", "interview_notes"],
+      "expected_keywords_in_chunks": ["microservices"],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q003",
+      "query": "What are the required skills for the Senior Java Developer role?",
+      "expected_doc_types": ["job_description"],
+      "expected_keywords_in_chunks": ["Spring Boot", "Kubernetes"],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q004",
+      "query": "Who has Terraform experience?",
+      "expected_doc_types": ["resume", "job_description"],
+      "expected_keywords_in_chunks": ["Terraform"],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q005",
+      "query": "What concerns were raised about Alice in interview feedback?",
+      "expected_doc_types": ["interview_notes"],
+      "expected_keywords_in_chunks": ["Kubernetes"],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q006",
+      "query": "Which candidate is primarily Python focused?",
+      "expected_doc_types": ["resume", "interview_notes"],
+      "expected_keywords_in_chunks": ["Python"],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q007",
+      "query": "Who is recommended for onsite interview for the Senior Java role?",
+      "expected_doc_types": ["interview_notes"],
+      "expected_keywords_in_chunks": ["Carol", "onsite"],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q008",
+      "query": "List AWS services mentioned across all resumes",
+      "expected_doc_types": ["resume"],
+      "expected_keywords_in_chunks": ["AWS", "ECS", "S3", "Lambda"],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q009",
+      "query": "What is the minimum years of experience required for the job?",
+      "expected_doc_types": ["job_description"],
+      "expected_keywords_in_chunks": ["5+ years", "5"],
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q010",
+      "query": "Who is based in Miami?",
+      "expected_doc_types": ["resume", "job_description"],
+      "expected_keywords_in_chunks": ["Miami"],
+      "expected_chunk_ids": []
+    }
+  ]
+}
